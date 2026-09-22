@@ -1,0 +1,80 @@
+.form {
+  width: 100%;
+  max-width: 420px;
+}
+
+.field {
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  padding: 0 18px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  background: var(--card);
+  font-family: var(--font-body), sans-serif;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.input::placeholder {
+  color: var(--muted);
+}
+
+.input:focus {
+  outline: 2px solid var(--header);
+  outline-offset: 2px;
+}
+
+.button {
+  height: 52px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  margin-top: 10px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.success {
+  max-width: 420px;
+  padding: 16px 18px;
+  border: 1.5px dashed var(--header);
+  border-radius: 14px;
+  background: var(--card);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--header);
+}
+
+@media (max-width: 480px) {
+  .field {
+    flex-direction: column;
+  }
+}

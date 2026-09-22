@@ -1,0 +1,257 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- nav --- */
+
+.nav {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 20px;
+}
+
+.navLink {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--header);
+  border: 1.5px solid var(--header);
+  border-radius: 12px;
+  padding: 9px 16px;
+}
+
+/* --- hero --- */
+
+.hero {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 48px 20px 72px;
+}
+
+.heroTitle {
+  font-size: 56px;
+  line-height: 1.05;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.heroSubtitle {
+  max-width: 560px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-wrap: balance;
+}
+
+.heroForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.heroNote {
+  font-family: var(--font-body), sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.heroTags {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.heroTags > :nth-child(2) {
+  transform: translateY(-6px) rotate(-2deg);
+}
+
+.heroTags > :nth-child(3) {
+  transform: translateY(4px) rotate(2deg);
+}
+
+/* --- section titles --- */
+
+.sectionTitle {
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--ink);
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  text-wrap: balance;
+}
+
+/* --- features --- */
+
+.features {
+  width: 100%;
+  max-width: 1080px;
+  padding: 56px 20px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.featureCard {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.featureIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--card-image);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.featureTitle {
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.featureText {
+  font-family: var(--font-body), sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* --- how it works --- */
+
+.steps {
+  width: 100%;
+  max-width: 1080px;
+  padding: 56px 20px;
+}
+
+.stepsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stepNumber {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1.5px dashed var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.stepTitle {
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.stepText {
+  font-family: var(--font-body), sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* --- footer CTA --- */
+
+.footerCta {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 56px 20px;
+  text-align: center;
+}
+
+.footerCtaTitle {
+  font-size: 26px;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+/* --- footer --- */
+
+.footer {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 40px 20px 56px;
+  border-top: 1.5px dashed var(--line);
+  margin-top: 24px;
+}
+
+.footerText {
+  font-family: var(--font-body), sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* --- responsive --- */
+
+@media (max-width: 860px) {
+  .featureGrid,
+  .stepsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .heroTitle {
+    font-size: 40px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .featureGrid,
+  .stepsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTags {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
